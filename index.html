@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iqbal Sons Jewellers — Haute Joaillerie & Bespoke Diamond Atelier</title>
+  <meta name="description" content="Iqbal Sons Jewellers: Form, Meaning, and Metal — United. Handcrafted bespoke diamond engagement rings, haute joaillerie, and luxury gold jewelry in solid platinum & 18K gold." />
+  <meta name="keywords" content="Iqbal Sons Jewellers, luxury jewelry, bespoke engagement rings, custom diamond rings, 18k gold bands, haute joaillerie, certified diamonds" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,15 85,42 50,88 15,42' fill='%23D4AF37' stroke='%23B8860B' stroke-width='3'/%3E%3Cpolyline points='15,42 50,52 85,42' fill='none' stroke='%23FFF' stroke-width='2' opacity='0.7'/%3E%3Cline x1='50' y1='52' x2='50' y2='88' stroke='%23FFF' stroke-width='2' opacity='0.7'/%3E%3C/svg%3E" />
+
+  <!-- Premium Typography: Cormorant Garamond (Haute Editorial Serif) & Plus Jakarta Sans (Clean Modern Geometry) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="luxury-body" id="top">
+
+  <!-- ══════════════════════════════════════════
+       01 — ANNOUNCEMENT TOAST BAR
+  ══════════════════════════════════════════ -->
+  <div class="announcement-bar">
+    <div class="site-container announcement-inner">
+      <span class="announcement-tag">ATELIER PRIVÉ</span>
+      <span class="announcement-text">Complimentary Insured Worldwide Shipping &bull; GIA &amp; IGI Certified Diamonds &bull; Lifetime Atelier Care</span>
+      <div class="currency-selector-wrap">
+        <label for="currency-select" class="currency-label">Currency:</label>
+        <select id="currency-select" class="currency-dropdown" onchange="changeCurrency(this.value)">
+          <option value="USD" selected>USD ($)</option>
+          <option value="PKR">PKR (Rs)</option>
+          <option value="AED">AED (د.إ)</option>
+          <option value="GBP">GBP (£)</option>
+          <option value="EUR">EUR (€)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       02 — SLEEK MINIMALIST HEADER & NAVBAR
+       (Exact match to Reference Design)
+  ══════════════════════════════════════════ -->
+  <header class="luxury-header" id="luxury-header">
+    <div class="site-container header-inner">
+      
+      <!-- Left: Hamburger Menu & Navigation -->
+      <div class="header-left">
+        <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Open menu" onclick="toggleMobileMenu()">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <nav class="header-nav" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li><a href="#hero" class="nav-link active">Home</a></li>
+            <li><a href="#collections" class="nav-link">Collections</a></li>
+            <li><a href="#atelier" class="nav-link">Bespoke Atelier</a></li>
+            <li><a href="#heritage" class="nav-link">Heritage</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Center: Brand Emblem & Monogram (Iqbal Sons Jewellers) -->
+      <div class="header-center">
+        <a href="#top" class="brand-anchor" aria-label="Iqbal Sons Jewellers Home">
+          <div class="brand-crest-group">
+            <!-- Radiant Diamond Emblem matching iqbal-sons-logo.jpg -->
+            <svg class="brand-diamond-svg" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Sunburst Radiant Crown Rays -->
+              <g class="crest-rays" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="28" y1="20" x2="22" y2="12" />
+                <line x1="38" y1="15" x2="35" y2="6" />
+                <line x1="50" y1="13" x2="50" y2="4" />
+                <line x1="62" y1="15" x2="65" y2="6" />
+                <line x1="72" y1="20" x2="78" y2="12" />
+                <!-- Micro Accent Rays -->
+                <line x1="33" y1="18" x2="31" y2="12" stroke-width="1.6" opacity="0.7"/>
+                <line x1="44" y1="14" x2="43" y2="8" stroke-width="1.6" opacity="0.7"/>
+                <line x1="56" y1="14" x2="57" y2="8" stroke-width="1.6" opacity="0.7"/>
+                <line x1="67" y1="18" x2="69" y2="12" stroke-width="1.6" opacity="0.7"/>
+              </g>
+              <!-- Multi-faceted Brilliant Diamond Body -->
+              <polygon points="50,22 86,34 50,76 14,34" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round" />
+              <!-- Facet Lines -->
+              <polygon points="50,22 68,34 50,76 32,34" fill="none" stroke="currentColor" stroke-width="1.8" opacity="0.85" />
+              <polyline points="14,34 50,42 86,34" stroke="currentColor" stroke-width="2.0" fill="none" />
+              <line x1="50" y1="22" x2="50" y2="42" stroke="currentColor" stroke-width="1.8" />
+              <line x1="32" y1="34" x2="50" y2="42" stroke="currentColor" stroke-width="1.4" />
+              <line x1="68" y1="34" x2="50" y2="42" stroke="currentColor" stroke-width="1.4" />
+            </svg>
+            <div class="brand-text-block">
+              <span class="brand-name">IQBAL SONS</span>
+              <span class="brand-discipline">JEWELLERS</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Right: Wishlist, Cart Pill & Account Actions -->
+      <div class="header-right">
+        <!-- Wishlist Button -->
+        <button class="header-icon-btn" id="wishlist-btn" aria-label="View Wishlist" onclick="toggleWishlistDrawer()" title="Wishlist">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="badge-dot" id="wishlist-count-badge">0</span>
+        </button>
+
+        <!-- Cart Pill Button (Matching Reference Design) -->
+        <button class="cart-pill-btn" id="cart-pill-btn" onclick="toggleCartDrawer()" aria-label="View Shopping Cart">
+          <span class="cart-pill-label">Cart</span>
+          <span class="cart-count-badge" id="cart-count-badge">0</span>
+        </button>
+
+        <!-- User Profile Icon -->
+        <button class="header-icon-btn profile-icon-btn" aria-label="Client Account / Atelier Concierge" onclick="openAtelierModal()" title="Client Concierge">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay" aria-hidden="true" onclick="toggleMobileMenu()"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <span class="drawer-brand-title">IQBAL SONS JEWELLERS</span>
+      <button class="drawer-close-btn" onclick="toggleMobileMenu()" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#hero" class="drawer-nav-item" onclick="toggleMobileMenu()">Home</a>
+      <a href="#collections" class="drawer-nav-item" onclick="toggleMobileMenu()">Collections</a>
+      <a href="#atelier" class="drawer-nav-item" onclick="toggleMobileMenu()">Bespoke Atelier</a>
+      <a href="#heritage" class="drawer-nav-item" onclick="toggleMobileMenu()">Heritage &amp; Craft</a>
+      <a href="#reviews" class="drawer-nav-item" onclick="toggleMobileMenu()">Client Accolades</a>
+    </nav>
+    <div class="drawer-footer">
+      <button class="btn-primary w-full" onclick="openAtelierModal(); toggleMobileMenu();">Book Atelier Appointment</button>
+    </div>
+  </aside>
+
+  <!-- ══════════════════════════════════════════
+       03 — CINEMATIC HERO SECTION
+       (Exact match to Reference Design: Center Video + Left Headline + Right Floating Card)
+  ══════════════════════════════════════════ -->
+  <section class="hero-stage-section" id="hero">
+    
+    <!-- Seamless Cinematic Video Stage -->
+    <div class="hero-video-viewport">
+      <video 
+        class="hero-video-element" 
+        id="hero-jewelry-video" 
+        autoplay 
+        loop 
+        muted 
+        playsinline 
+        webkit-playsinline 
+        preload="auto"
+        poster="assets/product-duo-band.jpg"
+      >
+        <source src="assets/hero-jewelry-video.mp4" type="video/mp4" />
+        <source src="VID-20260925-WA0086.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Warm Sand Dune Atmospheric Gradient Overlay -->
+      <div class="hero-dune-gradient"></div>
+      <div class="hero-ambient-glow"></div>
+    </div>
+
+    <!-- Hero Content Overlay Grid -->
+    <div class="site-container hero-container-overlay">
+      <div class="hero-bottom-grid">
+        
+        <!-- Left: Form, Meaning, and Metal — United -->
+        <div class="hero-text-block">
+          <h1 class="hero-main-title">
+            <span class="hero-registered-mark">&reg;</span>
+            <span class="hero-title-line">Form, Meaning,</span>
+            <span class="hero-title-line">and Metal &mdash; United</span>
+          </h1>
+          <p class="hero-lead-text">
+            We design custom rings with unique geometry and a story behind every piece. No templates. Only your idea and our expertise.
+          </p>
+          <div class="hero-actions-row">
+            <a href="#collections" class="btn-hero-explore">
+              <span>Explore Collection</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#atelier" class="btn-hero-atelier">Design Bespoke Piece</a>
+          </div>
+        </div>
+
+        <!-- Right: Floating Luxury Preview Card (Matching Reference Design) -->
+        <div class="hero-floating-card-wrap">
+          <div class="luxury-floating-card" id="hero-floating-card">
+            <div class="card-thumb-frame">
+              <img src="assets/hero_card_preview.jpg" alt="New viewpoint on jewelry art" class="card-thumb-img" loading="eager" />
+              <div class="card-thumb-shine"></div>
+            </div>
+            <div class="card-meta-col">
+              <span class="card-eyebrow-tag">Collection</span>
+              <h3 class="card-headline">New viewpoint<br>on jewelry art</h3>
+              <a href="#collections" class="btn-card-pill">Explore</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Soft Scroll Indicator -->
+    <a href="#collections" class="hero-scroll-prompt" aria-label="Scroll to collection">
+      <span class="scroll-dot"></span>
+    </a>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       04 — CURATED COLLECTIONS FILTER BAR
+  ══════════════════════════════════════════ -->
+  <section class="section collections-section" id="collections">
+    <div class="site-container">
+      
+      <div class="collections-head-row">
+        <div>
+          <span class="section-label-gold">CURATED CATALOGUE</span>
+          <h2 class="section-display-title">Signature Haute Creations</h2>
+        </div>
+        <p class="section-lead-desc">
+          Individually cast in solid 18K royal gold and pure platinum PT950, set with certified hand-selected stones.
+        </p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="collection-filter-pills" id="collection-filter-bar">
+        <!-- Rendered dynamically from data.js -->
+      </div>
+
+      <!-- Product Catalog Grid -->
+      <div class="product-catalog-grid" id="product-catalog-grid">
+        <!-- Injected dynamically from data.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       05 — INTERACTIVE BESPOKE RING ATELIER
+       ("No templates. Only your idea and our expertise")
+  ══════════════════════════════════════════ -->
+  <section class="section atelier-section" id="atelier">
+    <div class="site-container">
+      
+      <div class="atelier-card-box">
+        <div class="atelier-grid">
+          
+          <!-- Left: Customizer Controls -->
+          <div class="atelier-controls-col">
+            <span class="section-label-gold">BESPOKE RING ATELIER</span>
+            <h2 class="atelier-title">Design Your Custom Heirloom</h2>
+            <p class="atelier-sub">
+              Every curve forged from raw metal alloy to match your exact proportions. Calculate your bespoke setting in real-time.
+            </p>
+
+            <!-- Step 1: Setting Style -->
+            <div class="atelier-step-group">
+              <span class="step-label">01 / SELECT SETTING ARCHITECTURE</span>
+              <div class="setting-pills-row" id="setting-pills-container">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+
+            <!-- Step 2: Metal Alloy -->
+            <div class="atelier-step-group">
+              <span class="step-label">02 / SELECT PRECIOUS ALLOY</span>
+              <div class="metal-swatches-row" id="metal-swatches-container">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+
+            <!-- Step 3: Diamond Cut -->
+            <div class="atelier-step-group">
+              <span class="step-label">03 / SELECT DIAMOND GEOMETRY</span>
+              <div class="diamond-cut-row" id="diamond-cuts-container">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+
+            <!-- Step 4: Carat Weight Slider -->
+            <div class="atelier-step-group">
+              <div class="carat-label-row">
+                <span class="step-label">04 / CARAT WEIGHT</span>
+                <span class="carat-val-display" id="carat-val-display">2.00 ct</span>
+              </div>
+              <input type="range" min="1.00" max="3.00" step="0.25" value="2.00" class="carat-range-slider" id="carat-range-slider" oninput="updateAtelierCarat(this.value)" />
+              <div class="carat-ticks-row">
+                <span>1.00 ct</span>
+                <span>1.50 ct</span>
+                <span>2.00 ct</span>
+                <span>2.50 ct</span>
+                <span>3.00 ct</span>
+              </div>
+            </div>
+
+            <!-- Summary & Commission Trigger -->
+            <div class="atelier-summary-box">
+              <div class="atelier-price-row">
+                <div class="price-col">
+                  <span class="price-caption">ESTIMATED ATELIER INVESTMENT</span>
+                  <div class="atelier-price-num" id="atelier-total-price">$7,850</div>
+                </div>
+                <button type="button" class="btn-commission-atelier" onclick="commissionCustomRing()">
+                  <span>Commission This Piece</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Visual Stage & Diamond Specifications -->
+          <div class="atelier-visual-col">
+            <div class="atelier-stage-card">
+              <div class="stage-stone-preview" id="stage-stone-preview">
+                <img src="assets/product-duo-band.jpg" alt="Bespoke ring configuration" id="atelier-stage-img" class="stage-ring-img" />
+                <div class="stage-radial-light"></div>
+              </div>
+
+              <!-- Configuration Badges -->
+              <div class="stage-specs-grid">
+                <div class="spec-pill-item">
+                  <span class="spec-k">SETTING</span>
+                  <span class="spec-v" id="spec-setting-val">Classic Solitaire</span>
+                </div>
+                <div class="spec-pill-item">
+                  <span class="spec-k">ALLOY</span>
+                  <span class="spec-v" id="spec-metal-val">Platinum 950</span>
+                </div>
+                <div class="spec-pill-item">
+                  <span class="spec-k">DIAMOND CUT</span>
+                  <span class="spec-v" id="spec-cut-val">Round Brilliant</span>
+                </div>
+                <div class="spec-pill-item">
+                  <span class="spec-k">COLOR &amp; CLARITY</span>
+                  <span class="spec-v">Color E &bull; VVS1 Ideal</span>
+                </div>
+              </div>
+
+              <div class="atelier-guarantee-note">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Includes GIA/IGI Gemological Dossier, 3D Wax Mould Approval, &amp; Bespoke Wood Box</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       06 — HERITAGE & CRAFTSMANSHIP
+       (Iqbal Sons Legacy Since 1984)
+  ══════════════════════════════════════════ -->
+  <section class="section heritage-section" id="heritage">
+    <div class="site-container">
+      
+      <div class="heritage-split-grid">
+        
+        <div class="heritage-text-col">
+          <span class="section-label-gold">THE HOUSE OF IQBAL SONS</span>
+          <h2 class="heritage-title">Forty Years of Relentless Gold &amp; Diamond Mastery</h2>
+          
+          <p class="heritage-p">
+            Established with a singular commitment: rejecting transient trends in pursuit of timeless geometry. Every creation emerging from the Iqbal Sons atelier is an intimate dialogue between rare mineral crystalline structures and raw precious metals.
+          </p>
+          <p class="heritage-p">
+            We partner exclusively with sight-holders adhering to the highest humanitarian standards, transforming uncut stones into luminous heirlooms designed to outlast generations.
+          </p>
+
+          <div class="heritage-stats-row">
+            <div class="heritage-stat-col">
+              <span class="h-stat-num">1984</span>
+              <span class="h-stat-lbl">Atelier Founded</span>
+            </div>
+            <div class="heritage-stat-col">
+              <span class="h-stat-num">100%</span>
+              <span class="h-stat-lbl">Conflict-Free GIA Stones</span>
+            </div>
+            <div class="heritage-stat-col">
+              <span class="h-stat-num">PT950</span>
+              <span class="h-stat-lbl">&amp; 18K Solid Gold</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="heritage-media-col">
+          <div class="heritage-crest-frame">
+            <img src="assets/iqbal-sons-logo.jpg" alt="Iqbal Sons Jewellers Master Crest" class="heritage-logo-img" />
+            <div class="crest-frame-glow"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 4 Pillars Grid -->
+      <div class="heritage-pillars-grid" id="heritage-pillars-grid">
+        <!-- Rendered dynamically from data.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       07 — CLIENT ACCOLADES & REVIEWS
+  ══════════════════════════════════════════ -->
+  <section class="section reviews-section" id="reviews">
+    <div class="site-container">
+      
+      <div class="section-head-center">
+        <span class="section-label-gold">CLIENT COMMISSIONS</span>
+        <h2 class="section-display-title">Words from Our Patrons</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-body">
+            "The Duo Contour Band in Platinum is beyond anything we found at standard high-end boutiques. The satin finish against the mirror channel catches the desert sun magnificently."
+          </p>
+          <div class="review-author">
+            <span class="author-name">Sophia &amp; Tariq K.</span>
+            <span class="author-loc">Bespoke Wedding Bands &bull; Dubai, UAE</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-body">
+            "I commissioned a 2.50 ct emerald cut engagement ring. The team's CAD previews and wax prototype process gave me total confidence. She was left speechless."
+          </p>
+          <div class="review-author">
+            <span class="author-name">Alexander M.</span>
+            <span class="author-loc">Custom Solitaire Commission &bull; London, UK</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-body">
+            "Iqbal Sons represents true heirloom goldsmithing. Their attention to comfortable inner bevelling and prong security is unmatched in luxury jewelry."
+          </p>
+          <div class="review-author">
+            <span class="author-name">Zainab R.</span>
+            <span class="author-loc">Haute Joaillerie Suite &bull; Lahore &bull; Global</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       08 — SLIDE-OUT CART DRAWER
+  ══════════════════════════════════════════ -->
+  <div class="drawer-backdrop" id="cart-drawer-backdrop" onclick="toggleCartDrawer()"></div>
+  <aside class="cart-slide-drawer" id="cart-slide-drawer" aria-hidden="true">
+    
+    <div class="cart-drawer-head">
+      <div class="cart-title-row">
+        <h3 class="cart-heading">Your Selection</h3>
+        <span class="cart-items-counter" id="cart-drawer-count">(0 pieces)</span>
+      </div>
+      <button class="cart-close-btn" onclick="toggleCartDrawer()" aria-label="Close Bag">&times;</button>
+    </div>
+
+    <!-- Free Insured Shipping Progress Bar -->
+    <div class="shipping-perk-bar">
+      <div class="perk-text-row">
+        <span>Complimentary Worldwide Insured Delivery</span>
+        <span class="perk-status">QUALIFIED</span>
+      </div>
+      <div class="perk-progress-track">
+        <div class="perk-progress-fill" style="width: 100%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Container -->
+    <div class="cart-items-list" id="cart-items-list">
+      <!-- Injected dynamically via app.js -->
+    </div>
+
+    <!-- Cart Footer & Checkout -->
+    <div class="cart-drawer-foot">
+      <div class="cart-subtotal-row">
+        <span class="subtotal-label">Subtotal</span>
+        <span class="subtotal-val" id="cart-subtotal-val">$0</span>
+      </div>
+      <p class="cart-tax-notice">Taxes, duties, and insured worldwide transit included.</p>
+      
+      <button class="btn-checkout-primary" onclick="proceedToCheckout()">
+        <span>Proceed to Secure Checkout</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+
+      <button class="btn-continue-shopping" onclick="toggleCartDrawer()">Continue Browsing</button>
+    </div>
+
+  </aside>
+
+  <!-- ══════════════════════════════════════════
+       09 — SLIDE-OUT WISHLIST DRAWER
+  ══════════════════════════════════════════ -->
+  <div class="drawer-backdrop" id="wishlist-drawer-backdrop" onclick="toggleWishlistDrawer()"></div>
+  <aside class="cart-slide-drawer" id="wishlist-slide-drawer" aria-hidden="true">
+    <div class="cart-drawer-head">
+      <div class="cart-title-row">
+        <h3 class="cart-heading">Saved Pieces</h3>
+        <span class="cart-items-counter" id="wishlist-drawer-count">(0 pieces)</span>
+      </div>
+      <button class="cart-close-btn" onclick="toggleWishlistDrawer()" aria-label="Close Wishlist">&times;</button>
+    </div>
+    <div class="cart-items-list" id="wishlist-items-list">
+      <!-- Injected dynamically -->
+    </div>
+  </aside>
+
+  <!-- ══════════════════════════════════════════
+       10 — QUICK VIEW PRODUCT MODAL
+  ══════════════════════════════════════════ -->
+  <div class="quickview-overlay" id="quickview-modal" aria-hidden="true">
+    <div class="quickview-backdrop" onclick="closeQuickView()"></div>
+    <div class="quickview-dialog">
+      <button class="quickview-close-btn" onclick="closeQuickView()" aria-label="Close Quick View">&times;</button>
+      <div class="quickview-grid" id="quickview-content">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       11 — ATELIER APPOINTMENT BOOKING MODAL
+  ══════════════════════════════════════════ -->
+  <div class="quickview-overlay" id="atelier-modal" aria-hidden="true">
+    <div class="quickview-backdrop" onclick="closeAtelierModal()"></div>
+    <div class="atelier-dialog-card">
+      <button class="quickview-close-btn" onclick="closeAtelierModal()">&times;</button>
+      <span class="section-label-gold">CONCIERGE &bull; PRIVATE ATELIER</span>
+      <h3 class="concierge-modal-title">Book a Private Consultation</h3>
+      <p class="concierge-desc">
+        Meet directly with our master goldsmiths in person or via private video walkthrough. We will review your diamond preferences, finger geometry, and customized alloy options.
+      </p>
+
+      <form class="concierge-form" onsubmit="handleAppointmentSubmit(event)">
+        <div class="form-row">
+          <input type="text" placeholder="Your Full Name" required class="concierge-input" />
+          <input type="email" placeholder="Email Address" required class="concierge-input" />
+        </div>
+        <div class="form-row">
+          <input type="tel" placeholder="Phone / WhatsApp (+Country Code)" required class="concierge-input" />
+          <select class="concierge-input">
+            <option>Virtual Video Consultation (Worldwide)</option>
+            <option>Private Atelier Flagship Visit</option>
+            <option>Custom Diamond Search Brief</option>
+          </select>
+        </div>
+        <textarea placeholder="Describe your dream ring, target carat weight, or timeline..." rows="3" class="concierge-textarea"></textarea>
+        <button type="submit" class="btn-primary w-full">Request Private Appointment</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       12 — TOAST NOTIFICATIONS
+  ══════════════════════════════════════════ -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- ══════════════════════════════════════════
+       13 — EDITORIAL LUXURY FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="luxury-footer">
+    <div class="site-container">
+      
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div class="footer-crest-lockup">
+            <svg class="brand-diamond-svg" width="34" height="28" viewBox="0 0 100 80" fill="none">
+              <polygon points="50,22 86,34 50,76 14,34" fill="none" stroke="currentColor" stroke-width="3" />
+              <polyline points="14,34 50,42 86,34" stroke="currentColor" stroke-width="2" />
+            </svg>
+            <span class="footer-brand-name">IQBAL SONS JEWELLERS</span>
+          </div>
+          <p class="footer-manifesto">
+            Pioneering geometric harmony and bespoke diamond craftsmanship since 1984. Solid platinum PT950, 18K gold, conflict-free certified stones.
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="f-col-title">COLLECTIONS</span>
+          <ul class="f-links-list">
+            <li><a href="#collections" onclick="filterByCollection('bespoke-rings')">Bespoke Rings</a></li>
+            <li><a href="#collections" onclick="filterByCollection('diamond-solitaires')">Solitaire Diamonds</a></li>
+            <li><a href="#collections" onclick="filterByCollection('haute-joaillerie')">Haute Joaillerie</a></li>
+            <li><a href="#collections" onclick="filterByCollection('bridal-suites')">Bridal Suites</a></li>
+            <li><a href="#collections" onclick="filterByCollection('gold-essentials')">Gold Essentials</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="f-col-title">ATELIER PRIVÉ</span>
+          <ul class="f-links-list">
+            <li><a href="#atelier">Design Your Ring</a></li>
+            <li><a href="#heritage">The 1984 Heritage</a></li>
+            <li><a href="javascript:void(0)" onclick="openAtelierModal()">Book Consultation</a></li>
+            <li><a href="javascript:void(0)">GIA Diamond Dossiers</a></li>
+            <li><a href="javascript:void(0)">Complimentary Sizing Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter-col">
+          <span class="f-col-title">PRIVATE CLIENT DISPATCH</span>
+          <p class="f-news-text">Receive exclusive previews of rare stone acquisitions and limited atelier releases.</p>
+          <form class="footer-news-form" onsubmit="handleNewsletter(event)">
+            <input type="email" placeholder="Enter your email address" required class="news-input" />
+            <button type="submit" class="news-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <span class="footer-legal">&copy; 2026 Iqbal Sons Jewellers. All rights reserved. Registered Trademark.</span>
+        <div class="footer-badges">
+          <span>GIA Certified</span>
+          <span>&bull;</span>
+          <span>IGI Verified</span>
+          <span>&bull;</span>
+          <span>Kimberley Process Compliant</span>
+          <span>&bull;</span>
+          <span>PT950 &bull; 18K Hallmarked</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
